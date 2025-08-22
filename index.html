@@ -17,6 +17,9 @@
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="assets/icons/favicon.ico">
     
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lora:wght@400;500;600&display=swap" rel="stylesheet">
+    
     <!-- CSS Files -->
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/animations.css">
@@ -24,6 +27,454 @@
     <!-- Preload Fonts -->
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" as="style">
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Lora:wght@300;400;500;600;700&display=swap" as="style">
+    
+    <style>
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Variables */
+:root {
+    --color-primary: #FBE7C6;
+    --color-secondary: #B4F8C8;
+    --color-accent: #A0E7E5;
+    --color-detail: #FFAEBC;
+    --color-text: #4A5568;
+    --color-heading: #2D3748;
+    --color-white: #FFFFFF;
+    --color-bg: #FAFAFA;
+    --spacing-sm: 12px;
+    --spacing-md: 20px;
+    --spacing-lg: 30px;
+    --border-radius-sm: 8px;
+    --border-radius-md: 12px;
+}
+
+/* Base */
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    color: var(--color-text);
+    background: var(--color-bg);
+    line-height: 1.6;
+}
+
+/* Navigation */
+.ebook-navigation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: var(--color-white);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    z-index: 1000;
+    padding: 15px 30px;
+}
+
+.nav-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    font-size: 24px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-link {
+    color: var(--color-text);
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+.nav-link:hover {
+    background: var(--color-primary);
+    color: var(--color-heading);
+}
+
+.nav-toggle {
+    display: none;
+}
+
+/* Pages */
+.ebook-page {
+    max-width: 900px;
+    margin: 100px auto 40px;
+    padding: 60px;
+    background: var(--color-white);
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+/* Cover Page */
+.cover-page {
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.decorative-shape {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.2;
+}
+
+.shape-1 {
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+    top: -50px;
+    right: -50px;
+}
+
+.shape-2 {
+    width: 150px;
+    height: 150px;
+    background: linear-gradient(135deg, var(--color-accent), var(--color-detail));
+    bottom: -30px;
+    left: -30px;
+}
+
+.shape-3 {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(135deg, var(--color-secondary), var(--color-accent));
+    top: 50%;
+    left: -20px;
+}
+
+.cover-title {
+    font-size: 48px;
+    color: var(--color-heading);
+    margin-bottom: 20px;
+    font-family: 'Lora', serif;
+}
+
+.cover-subtitle {
+    font-size: 20px;
+    color: var(--color-text);
+    margin-bottom: 30px;
+    max-width: 600px;
+}
+
+.cover-author {
+    font-size: 18px;
+    color: var(--color-accent);
+    font-weight: 600;
+}
+
+/* Table of Contents */
+.toc-list {
+    list-style: none;
+    padding: 0;
+}
+
+.toc-item {
+    margin-bottom: 15px;
+}
+
+.toc-link {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 20px;
+    background: var(--color-bg);
+    border-radius: 8px;
+    text-decoration: none;
+    color: var(--color-text);
+    transition: all 0.3s;
+}
+
+.toc-link:hover {
+    background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+    transform: translateX(5px);
+}
+
+.toc-number {
+    color: var(--color-accent);
+    font-weight: 600;
+}
+
+/* Chapter Pages */
+.chapter-header {
+    border-bottom: 3px solid var(--color-primary);
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+.chapter-number {
+    color: var(--color-accent);
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.chapter-title {
+    font-size: 36px;
+    color: var(--color-heading);
+    margin: 10px 0;
+    font-family: 'Lora', serif;
+}
+
+.chapter-subtitle {
+    font-size: 18px;
+    color: var(--color-text);
+    font-style: italic;
+}
+
+/* Content */
+.content-text {
+    margin-bottom: 30px;
+}
+
+.content-text p {
+    margin-bottom: 20px;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.content-text h3 {
+    color: var(--color-heading);
+    margin: 30px 0 15px;
+    font-size: 24px;
+}
+
+.content-text ul, .content-text ol {
+    margin: 20px 0 20px 30px;
+}
+
+.content-text li {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+/* Pull Quotes */
+.pull-quote {
+    background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+    padding: 30px;
+    border-radius: 12px;
+    margin: 30px 0;
+    position: relative;
+}
+
+.quote-text {
+    font-size: 20px;
+    font-style: italic;
+    color: var(--color-heading);
+    margin-bottom: 10px;
+}
+
+.quote-author {
+    text-align: right;
+    color: var(--color-text);
+    font-weight: 600;
+}
+
+/* CTA Section */
+.cta-section {
+    background: linear-gradient(135deg, var(--color-secondary), var(--color-accent));
+    padding: 40px;
+    border-radius: 12px;
+    text-align: center;
+    margin: 40px 0;
+}
+
+.cta-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #25D366;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    transition: all 0.3s;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+}
+
+.cta-whatsapp:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+}
+
+/* WhatsApp Float */
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #25D366;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    z-index: 1000;
+    text-decoration: none;
+    font-size: 32px;
+    transition: all 0.3s;
+    animation: pulse 2s infinite;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+    }
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 30px 0;
+}
+
+th {
+    background: var(--color-secondary);
+    padding: 12px;
+    text-align: left;
+    font-weight: 600;
+}
+
+td {
+    padding: 12px;
+    border: 1px solid var(--color-accent);
+}
+
+tr:nth-child(even) {
+    background: var(--color-bg);
+}
+
+/* Page Numbers */
+.page-number {
+    position: absolute;
+    bottom: 20px;
+    right: 30px;
+    color: var(--color-accent);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* Author Page */
+.author-avatar {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+    color: var(--color-white);
+    margin: 0 auto 20px;
+}
+
+.author-content {
+    text-align: center;
+}
+
+.author-social {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.social-link {
+    font-size: 24px;
+    text-decoration: none;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .ebook-page {
+        margin: 80px 20px 20px;
+        padding: 30px 20px;
+    }
+    
+    .nav-links {
+        display: none;
+    }
+    
+    .nav-toggle {
+        display: block;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+    
+    .nav-toggle span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background: var(--color-heading);
+        margin: 5px 0;
+        transition: 0.3s;
+    }
+    
+    .cover-title {
+        font-size: 32px;
+    }
+    
+    .chapter-title {
+        font-size: 28px;
+    }
+    
+    .whatsapp-float {
+        width: 55px;
+        height: 55px;
+        bottom: 20px;
+        right: 20px;
+    }
+}
+
+/* Print */
+@media print {
+    .ebook-navigation,
+    .whatsapp-float {
+        display: none !important;
+    }
+    
+    .ebook-page {
+        box-shadow: none;
+        page-break-after: always;
+        margin: 0;
+        padding: 40px;
+    }
+    
+    .decorative-shape {
+        display: none;
+    }
+}
+</style>
 </head>
 <body>
     <!-- Navigation -->
