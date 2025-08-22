@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ebook Moderno para Alexandra</title>
+    <meta name="description" content="Um ebook moderno e elegante criado especificamente para Alexandra com design contemporâneo e paleta de cores suaves">
+    <meta name="keywords" content="ebook, design moderno, Alexandra, template, pastel">
+    <meta name="author" content="Alexandra">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Ebook Moderno para Alexandra">
+    <meta property="og:description" content="Um ebook moderno e elegante com design contemporâneo">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/icons/favicon.ico">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/animations.css">
+    
+    <!-- Preload Fonts -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Lora:wght@300;400;500;600;700&display=swap" as="style">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="ebook-navigation" id="navigation">
+        <div class="nav-content">
+            <div class="nav-logo">📚</div>
+            <div class="nav-links">
+                        <a href="#cover" class="nav-link">Capa</a>
+        <a href="#toc" class="nav-link">Sumário</a>
+        <a href="#introduction" class="nav-link">Introdução</a>
+        <a href="#author" class="nav-link">Autor</a>
+        <a href="#" class="nav-link" onclick="downloadPDF()">📥 Baixar PDF</a>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Cover Page -->
+    <section id="cover" class="ebook-page cover-page">
+        <div class="decorative-shape shape-1"></div>
+        <div class="decorative-shape shape-2"></div>
+        <div class="decorative-shape shape-3"></div>
+        
+        <div class="page-content">
+            <h1 class="cover-title">Do Caos à Consistência</h1>
+            <p class="cover-subtitle">O sistema de 5 minutos que transforma reuniões improdutivas em motor diário de performance</p>
+            <p class="cover-author">Por Alexandra Silva</p>
+            <p class="cover-date">2025</p>
+        </div>
+        
+        <div class="page-number">1</div>
+    </section>
+
+    <!-- Table of Contents -->
+    <section id="toc" class="ebook-page toc-page">
+        <div class="page-content">
+            <h2 class="toc-title">Sumário</h2>
+            <ul class="toc-list">
+                <li class="toc-item" data-target="introduction">
+                    <a href="#introduction" class="toc-link">
+                        <span>Introdução: Do Caos à Consistência</span>
+                        <span class="toc-number">1</span>
+                    </a>
+                </li>
+                <li class="toc-item" data-target="chapter1">
+                    <a href="#chapter1" class="toc-link">
+                        <span>Capítulo 1: O Problema das Reuniões Longas e o Poder do Ritmo</span>
+                        <span class="toc-number">2</span>
+                    </a>
+                </li>
+                <li class="toc-item" data-target="chapter2">
+                    <a href="#chapter2" class="toc-link">
+                        <span>Capítulo 2: O Plano Semanal de Aceleração</span>
+                        <span class="toc-number">3</span>
+                    </a>
+                </li>
+                <li class="toc-item" data-target="chapter3">
+                    <a href="#chapter3" class="toc-link">
+                        <span>Capítulo 3: O Diagnóstico de Performance do Líder</span>
+                        <span class="toc-number">4</span>
+                    </a>
+                </li>
+                <li class="toc-item" data-target="chapter4">
+                    <a href="#chapter4" class="toc-link">
+                        <span>Capítulo 4: O Check-in de 5 Minutos</span>
+                        <span class="toc-number">5</span>
+                    </a>
+                </li>
+                <li class="toc-item" data-target="chapter5">
+                    <a href="#chapter5" class="toc-link">
+                        <span>Capítulo 5: O Diagnóstico de Performance do Líder</span>
+                        <span class="toc-number">6</span>
+                    </a>
+                </li>
+                <li class="toc-item" data-target="chapter6">
+                    <a href="#chapter6" class="toc-link">
+                        <span>Capítulo 6: A Reunião da Vitória</span>
+                        <span class="toc-number">7</span>
+                    </a>
+                </li>
+                <li class="toc-item" data-target="conclusion">
+                    <a href="#conclusion" class="toc-link">
+                        <span>Conclusão: Pronto para Entrar no Ciclo Lucrativo?</span>
+                        <span class="toc-number">8</span>
+                    </a>
+                </li>
+                <li class="toc-item" data-target="author">
+                    <a href="#author" class="toc-link">
+                        <span>Sobre a Autora</span>
+                        <span class="toc-number">9</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="page-number">2</div>
+    </section>
+
+    <!-- Introduction -->
+    <section id="introduction" class="ebook-page chapter-page">
+        <div class="page-content">
+            <div class="chapter-header">
+                <h2 class="chapter-title">Introdução: Do Caos à Consistência</h2>
+                <p class="chapter-subtitle">Transformando reuniões improdutivas em motor diário de performance</p>
+            </div>
+            
+            <div class="content-section">
+                <div class="content-text">
+                    <p>Se você é empresário, sabe como é cansativo sentir que carrega a empresa nas costas. As vendas dependem do seu esforço pessoal, e quando você tira o pé, tudo parece desmoronar.</p>
+                    
+                    <p>Esse é o caos silencioso que prende milhares de negócios: falta de previsibilidade, time desmotivado e resultados que oscilam como uma montanha-russa.</p>
+                    
+                    <p>Mas existe uma verdade que poucos encaram: <strong>o crescimento não acontece no improviso, e sim no ritmo.</strong></p>
+                    
+                    <p>As empresas que prosperam não contam com talentos isolados. Elas funcionam como máquinas bem ajustadas, em que cada parte contribui para o todo.</p>
+                    
+                    <p>A boa notícia é que esse ritmo pode ser criado — e você pode começar em apenas <strong>5 minutos por dia</strong>.</p>
+                </div>
+                
+                <div class="pull-quote">
+                    <p class="quote-text">Este e-book não é teoria. É um guia prático inspirado em frameworks de autores como Mark Roberge (HubSpot), Jeb Blount (Fanatical Prospecting) e práticas de liderança ágil usadas em empresas que escalam em ritmo acelerado.</p>
+                    <p class="quote-author">— Alexandra Silva</p>
+                </div>
+                
+                <div class="content-text">
+                    <p>Aqui, você vai aprender um sistema simples para transformar reuniões improdutivas em um motor diário de performance, aplicável já na sua próxima semana.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="page-number">3</div>
+    </section>
+
+    <!-- Chapter 1 -->
+    <section id="chapter1" class="ebook-page chapter-page">
+        <div class="page-content">
+            <div class="chapter-header">
+                <div class="chapter-number">Capítulo 1</div>
+                <h2 class="chapter-title">O Problema das Reuniões Longas e o Poder do Ritmo</h2>
+                <p class="chapter-subtitle">Transformando energia dispersa em execução alinhada</p>
+            </div>
+            
+            <div class="content-section">
+                <div class="content-text">
+                    <p>Você provavelmente já esteve numa reunião de vendas que parecia interminável. Uma hora inteira de reclamações sobre leads ruins, desculpas sobre metas não batidas, debates sem conclusão. No fim, ninguém saía com clareza do que precisava ser feito naquele dia.</p>
+                    
+                    <p>Isso não é apenas cansativo — é caro. A Harvard Business Review estima que reuniões ineficientes custam mais de US$ 37 bilhões por ano às empresas americanas. Se sua equipe de 5 pessoas gasta 2 horas em uma reunião sem clareza, são 10 horas de vendas perdidas. A R$ 200 por hora de produtividade comercial, isso equivale a R$ 2 mil por semana jogados fora.</p>
+                    
+                    <p>A McKinsey mostra que vendedores passam só 34% do tempo com clientes. O resto se perde em relatórios, tarefas internas e, claro, reuniões improdutivas.</p>
+                </div>
+                
+                <div class="pull-quote">
+                    <p class="quote-text">O que realmente derruba um time de vendas não é falta de esforço. É falta de ritmo.</p>
+                    <p class="quote-author">— Alexandra Silva</p>
+                </div>
+                
+                <div class="content-text">
+                    <h3>A verdade que ninguém conta</h3>
+                    <p>Empresas que crescem de forma consistente não dependem do "talento" de um ou dois vendedores. Elas operam com cadência. Mark Roberge, ex-CRO da HubSpot, chama isso de receita previsível: um sistema de ações diárias que gera resultados constantes, mesmo quando o humor da equipe varia.</p>
+                    
+                    <p><strong>Ou seja: não é mais esforço, é esforço ritmado.</strong></p>
+                    
+                    <h3>O que líderes de verdade fazem diferente</h3>
+                    <p>Pense em um atleta de alta performance. Ele não treina 12 horas em um único dia e depois descansa a semana inteira. Ele treina todos os dias, em blocos curtos e consistentes. Esse é o segredo do progresso.</p>
+                    
+                    <p>Com equipes de vendas é igual: pequenas doses de foco diário superam maratonas improdutivas. É por isso que check-ins curtos de 5 minutos substituem com vantagem aquelas reuniões arrastadas. Eles criam um ciclo de feedback rápido: se algo deu errado ontem, você ajusta hoje.</p>
+                    
+                    <h3>Insight prático</h3>
+                    <p>A Gallup descobriu que equipes que têm conversas rápidas e frequentes com seus líderes são 3,5 vezes mais engajadas do que aquelas que se reúnem apenas uma vez por semana. Engajamento significa mais motivação, mais prospecção e, no fim, mais vendas.</p>
+                    
+                    <h3>O desafio para você</h3>
+                    <p>Como líder, você precisa decidir: vai continuar assistindo sua equipe perder tempo em discussões intermináveis ou vai assumir o papel de quem impõe ritmo e transforma energia em vitória?</p>
+                </div>
+                
+                <div class="pull-quote">
+                    <p class="quote-text">"O que mata um time de vendas não é a falta de esforço. É a falta de ritmo."</p>
+                    <p class="quote-author">— Alexandra Silva</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="page-number">4</div>
+    </section>
+
+    <!-- Chapter 2 -->
+    <section id="chapter2" class="ebook-page chapter-page">
+        <div class="page-content">
+            <div class="chapter-header">
+                <div class="chapter-number">Capítulo 2</div>
+                <h2 class="chapter-title">O Plano Semanal de Aceleração</h2>
+                <p class="chapter-subtitle">Criando ritmo e cadência para resultados previsíveis</p>
+            </div>
+            
+            <div class="content-section">
+                <div class="content-text">
+                    <p>Você não precisa de mais reuniões longas. O que você precisa é de um ritmo semanal simples, que mantenha seu time no foco certo todos os dias.</p>
+                    
+                    <p>A fórmula é direta:</p>
+                    <ul>
+                        <li><strong>Segunda-feira:</strong> planejar.</li>
+                        <li><strong>Terça a quinta-feira:</strong> executar com check-ins rápidos.</li>
+                        <li><strong>Sexta-feira:</strong> celebrar e ajustar.</li>
+                    </ul>
+                    
+                    <p>Esse é o ciclo que mantém a equipe na cadência e transforma esforço em resultado previsível.</p>
+                </div>
+                
+                <div class="content-text">
+                    <h3>1. A Reunião de Planejamento (Segunda-feira – 30 min)</h3>
+                    <p><strong>Objetivo:</strong> olhar para trás, aprender, e olhar para frente, decidir.</p>
+                    
+                    <p><strong>Roteiro prático:</strong></p>
+                    <ul>
+                        <li>O que conquistamos na semana passada?</li>
+                        <li>O que precisamos conquistar nesta semana?</li>
+                        <li>Quais obstáculos já conseguimos enxergar?</li>
+                    </ul>
+                    
+                    <p>Não complique. Traga os números certos para a mesa:</p>
+                    <ul>
+                        <li><strong>Atividade:</strong> ligações, propostas enviadas, contatos feitos.</li>
+                        <li><strong>Funil:</strong> taxas de conversão em cada etapa.</li>
+                        <li><strong>Resultado:</strong> negócios fechados, receita gerada, ticket médio.</li>
+                        <li><strong>Qualidade:</strong> taxa de no-show, alinhamento dos leads.</li>
+                    </ul>
+                    
+                    <p>Quando você mostra esses indicadores com clareza, sua equipe enxerga exatamente onde precisa atacar.</p>
+                </div>
+                
+                <div class="content-text">
+                    <h3>2. O Check-in Diário (Terça a Quinta-feira – 5 min cada)</h3>
+                    <p><strong>Objetivo:</strong> manter o time no ritmo, resolver rápido, celebrar pequenas vitórias.</p>
+                    
+                    <p><strong>Formato de "raio laser":</strong> cada vendedor responde em sequência rápida:</p>
+                    <ol>
+                        <li>O que você fez ontem?</li>
+                        <li>O que você vai fazer hoje?</li>
+                        <li>O que te impede de fazer isso?</li>
+                    </ol>
+                    
+                    <p>Nada de enrolação. São cinco minutos que mantêm todos em movimento.</p>
+                    
+                    <p>Segundo a Gartner, equipes que adotam check-ins curtos aumentam em até 25% a velocidade de fechamento de negócios, porque eliminam gargalos antes que eles cresçam.</p>
+                    
+                    <p>Na prática, um check-in de 5 minutos economiza pelo menos 45 minutos em comparação com uma reunião longa. Em um time de 6 vendedores, isso libera 22 horas por semana, tempo suficiente para gerar de 10 a 15 novas prospecções qualificadas.</p>
+                </div>
+                
+                <div class="content-text">
+                    <h3>3. A Reunião de Celebração (Sexta-feira – 15 min)</h3>
+                    <p><strong>Objetivo:</strong> reforçar cultura de vitória.</p>
+                    
+                    <p><strong>Roteiro simples:</strong></p>
+                    <ul>
+                        <li>Qual foi sua maior conquista da semana?</li>
+                        <li>O que aprendemos que vamos levar para a próxima?</li>
+                        <li>Vamos celebrar e nos preparar para a próxima vitória.</li>
+                    </ul>
+                    
+                    <p>Celebrar pequenas vitórias é mais do que motivação. É estratégia. A psicologia organizacional mostra que reforçar conquistas aumenta em 31% a produtividade da equipe (estudo da Universidade da Califórnia).</p>
+                </div>
+                
+                <div class="pull-quote">
+                    <p class="quote-text">Se você aplicar esse ciclo por 30 dias, vai notar três efeitos imediatos: mais clareza, mais velocidade e mais moral.</p>
+                    <p class="quote-author">— Alexandra Silva</p>
+                </div>
+                
+                <div class="content-text">
+                    <h3>O desafio para você</h3>
+                    <p>Pare agora e responda:</p>
+                    <ul>
+                        <li>Sua semana tem um plano claro?</li>
+                        <li>Sua equipe sabe, todos os dias, o que precisa fazer?</li>
+                        <li>Você está celebrando as vitórias que fortalecem a cultura de sucesso?</li>
+                    </ul>
+                    
+                    <p>Se a resposta for "não", está na hora de assumir o controle. O ritmo da sua empresa começa com você.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="page-number">5</div>
+    </section>
+
+    <!-- Chapter 3 -->
+    <section id="chapter3" class="ebook-page chapter-page">
+        <div class="page-content">
+            <div class="chapter-header">
+                <div class="chapter-number">Capítulo 3</div>
+                <h2 class="chapter-title">O Diagnóstico de Performance do Líder</h2>
+                <p class="chapter-subtitle">Identificando a raiz dos problemas para agir com precisão</p>
+            </div>
+            
+            <div class="content-section">
+                <div class="content-text">
+                    <p>Ser líder não é apenas cobrar resultado. É ser capaz de diagnosticar a raiz dos problemas e agir rápido para corrigi-los.</p>
+                    
+                    <p>Pense como um médico de alta performance: não adianta tratar o sintoma, é preciso identificar a causa real. No time de vendas, é a mesma lógica. Quando o resultado cai, o líder que apenas pressiona não resolve. O líder que diagnostica, sim.</p>
+                </div>
+                
+                <div class="content-text">
+                    <h3>O Diamante da Performance</h3>
+                    <p>Use esta ferramenta simples como sua bússola. Sempre que um vendedor não performar, siga a sequência:</p>
+                    
+                    <h4>1. Clareza (O QUE fazer)</h4>
+                    <ul>
+                        <li><strong>Sintoma:</strong> "Eu não sabia que era para fazer isso."</li>
+                        <li><strong>Solução:</strong> Reforce a comunicação. Peça para a pessoa repetir em voz alta o que precisa entregar.</li>
+                    </ul>
+                    
+                    <h4>2. Capacitação (COMO fazer)</h4>
+                    <ul>
+                        <li><strong>Sintoma:</strong> "Eu não sei como fazer isso."</li>
+                        <li><strong>Solução:</strong> Retorne ao checklist de treinamento. Muitas vezes a falha está no processo, não na pessoa.</li>
+                    </ul>
+                    
+                    <h4>3. Motivação (QUERER fazer)</h4>
+                    <ul>
+                        <li><strong>Sintoma:</strong> "Não estou com vontade."</li>
+                        <li><strong>Solução:</strong> Investigue se é falta de reconhecimento, desalinhamento com metas ou até questões pessoais. Líderes de verdade reacendem o fogo.</li>
+                    </ul>
+                    
+                    <h4>4. Circunstâncias (PODE fazer)</h4>
+                    <ul>
+                        <li><strong>Sintoma:</strong> "Não consigo, o sistema está fora do ar."</li>
+                        <li><strong>Solução:</strong> Remova os obstáculos. Tecnologia, burocracia, processos lentos — seu papel é abrir caminho para que a equipe faça o que precisa ser feito.</li>
+                    </ul>
+                </div>
+                
+                <div class="pull-quote">
+                    <p class="quote-text">Segundo a Gallup, líderes que sabem diagnosticar corretamente aumentam em 48% a chance de engajamento da equipe.</p>
+                    <p class="quote-author">— Estudo Gallup</p>
+                </div>
+                
+                <div class="content-text">
+                    <h3>O que os grandes líderes fazem diferente</h3>
+                    <p>Mark Roberge, da HubSpot, afirma que o papel do gestor de vendas é "construir o ambiente para que a média do time seja sempre elevada". Isso não se faz com bronca, mas com sistema.</p>
+                    
+                    <h3>Insight prático</h3>
+                    <p>Toda vez que um resultado não for alcançado, não pergunte "por que você não fez?". Pergunte:</p>
+                    <ul>
+                        <li>Você sabia exatamente o que precisava fazer?</li>
+                        <li>Você sabia como fazer?</li>
+                        <li>Você tinha vontade de fazer?</li>
+                        <li>Algo te impediu de fazer?</li>
+                    </ul>
+                    
+                    <p>As respostas a essas quatro perguntas vão mostrar o caminho para a solução.</p>
+                    
+                    <h3>Reflexão do Líder</h3>
+                    <p>O verdadeiro líder não é o que cobra mais, é o que vê além da superfície. Sua equipe precisa de alguém que diagnostique, que abra caminho e que dê as ferramentas certas.</p>
+                    
+                    <p>Porque no campo de batalha das vendas, não vence o chefe que grita mais alto. Vence o líder que organiza, inspira e faz a tropa acreditar que a vitória é possível.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="page-number">6</div>
+    </section>
+
+    <!-- Chapter 4 -->
+    <section id="chapter4" class="ebook-page chapter-page">
+        <div class="page-content">
+            <div class="chapter-header">
+                <div class="chapter-number">Capítulo 4</div>
+                <h2 class="chapter-title">O Check-in de 5 Minutos: A Ferramenta Essencial para Criar Ritmo</h2>
+                <p class="chapter-subtitle">Transformando energia dispersa em execução alinhada</p>
+            </div>
+            
+            <div class="content-section">
+                <div class="content-text">
+                    <p>Se a sua equipe passa horas em reuniões semanais, mas continua perdida no dia a dia, o problema não é falta de esforço — é falta de foco no agora.</p>
+                    
+                    <p>A solução não é mais controle, é mais ritmo. E o check-in diário de 5 minutos é a ferramenta que transforma energia dispersa em execução alinhada.</p>
+                </div>
+                
+                <div class="content-text">
+                    <h3>Como funciona na prática</h3>
+                    <ol>
+                        <li><strong>O que você fez ontem?</strong> (ações concretas, não desculpas).</li>
+                        <li><strong>O que você fará hoje?</strong> (uma meta clara para as próximas 24h).</li>
+                        <li><strong>O que está te impedindo de avançar?</strong> (remover obstáculos imediatos).</li>
+                    </ol>
+                    
+                    <p>Cada membro responde rápido. O líder anota, resolve barreiras e segue. Cinco minutos. Foco. Clareza.</p>
+                </div>
+                
+                <div class="content-text">
+                    <h3>📋 Modelo de Check-in Diário (5 Minutos)</h3>
+                    <div class="table-container">
+                        <table style="width: 100%; border-collapse: collapse; margin: var(--spacing-lg) 0;">
+                            <thead>
+                                <tr style="background: var(--color-primary);">
+                                    <th style="padding: var(--spacing-sm); text-align: left; border: 1px solid var(--color-accent);">Pergunta-chave</th>
+                                    <th style="padding: var(--spacing-sm); text-align: left; border: 1px solid var(--color-accent);">Objetivo</th>
+                                    <th style="padding: var(--spacing-sm); text-align: left; border: 1px solid var(--color-accent);">Exemplo de Resposta</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td style="padding: var(--spacing-sm); border: 1px solid var(--color-accent);">1. O que você fez ontem?</td>
+                                    <td style="padding: var(--spacing-sm); border: 1px solid var(--color-accent);">Revisar execução real, sem desculpas.</td>
+                                    <td style="padding: var(--spacing-sm); border: 1px solid var(--color-accent);">"Enviei 12 propostas e fiz 8 follow-ups."</td>
+                                </tr>
+                                <tr style="background: var(--gradient-soft);">
+                                    <td style="padding: var(--spacing-sm); border: 1px solid var(--color-accent);">2. O que você fará hoje?</td>
+                                    <td style="padding: var(--spacing-sm); border: 1px solid var(--color-accent);">Definir foco imediato e claro.</td>
+                                    <td style="padding: var(--spacing-sm); border: 1px solid var(--color-accent);">"Ligar para 15 prospects e marcar 3 reuniões."</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: var(--spacing-sm); border: 1px solid var(--color-accent);">3. O que está te impedindo de avançar?</td>
+                                    <td style="padding: var(--spacing-sm); border: 1px solid var(--color-accent);">Identificar barreiras que o líder deve remover.</td>
+                                    <td style="padding: var(--spacing-sm); border: 1px solid var(--color-accent);">"Preciso da aprovação de orçamento para enviar proposta ao cliente X."</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <div class="content-text">
+                    <h3>Por que funciona</h3>
+                    <ul>
+                        <li><strong>Segundo a Gallup,</strong> equipes que têm conversas curtas e frequentes com seus líderes são 3,5 vezes mais engajadas.</li>
+                        <li><strong>Empresas que implementam "daily huddles"</strong> relatam aumentos de até 20% na velocidade de execução (Fonte: Verne Harnish, Scaling Up).</li>
+                        <li><strong>Esse formato elimina desculpas:</strong> todos sabem o que entregar hoje, não só na "reunião da semana que vem".</li>
+                    </ul>
+                    
+                    <h3>O papel do líder</h3>
+                    <p>Um líder não é um bombeiro apagando incêndios; é o maestro que dá o compasso.</p>
+                    
+                    <p>O check-in diário não serve para microgerenciar, mas para garantir clareza, cadência e responsabilidade. É a prova de que liderança é menos sobre falar e mais sobre criar ritmo de vitória.</p>
+                    
+                    <h3>Insight prático</h3>
+                    <p>Teste com sua equipe amanhã mesmo. Não explique demais. Apenas chame todos em pé, faça as três perguntas e encerre em 5 minutos. No fim da semana, compare o nível de clareza, energia e resultados.</p>
+                </div>
+                
+                <div class="pull-quote">
+                    <p class="quote-text">Reflexão do Líder: Você prefere uma equipe que se arrasta em reuniões longas ou um time que entra todo dia em campo sabendo exatamente como marcar o próximo ponto?</p>
+                    <p class="quote-author">— Alexandra Silva</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="page-number">7</div>
+    </section>
+
+    <!-- Chapter 5 -->
+    <section id="chapter5" class="ebook-page chapter-page">
+        <div class="page-content">
+            <div class="chapter-header">
+                <div class="chapter-number">Capítulo 5</div>
+                <h2 class="chapter-title">O Diagnóstico de Performance do Líder</h2>
+                <p class="chapter-subtitle">Investigando causas em vez de buscar culpados</p>
+            </div>
+            
+            <div class="content-section">
+                <div class="content-text">
+                    <p>Imagine a cena: você cobra resultados, marca reuniões, aperta sua equipe. Mesmo assim, as metas não vêm. No fim do mês, sobra a frustração — e a sensação de que, se você não fizer, nada anda.</p>
+                    
+                    <p>O erro não está apenas no time. O erro está na forma como você diagnostica.</p>
+                    
+                    <p>A maioria dos líderes reage aos sintomas — queda nas vendas, baixa produtividade, desculpas repetidas. Mas o líder que cresce de verdade não reage: ele investiga. Ele age como um médico que não receita sem antes entender a causa.</p>
+                </div>
+                
+                <div class="content-text">
+                    <h3>O Diamante da Performance</h3>
+                    <p>Para diagnosticar com clareza, você precisa de um modelo simples, que evite achismos e direcione a ação. É aqui que entra o Diamante da Performance: quatro perguntas que revelam, em minutos, onde está o gargalo.</p>
+                    
+                    <h4>1. Clareza – O funcionário sabe O QUE fazer?</h4>
+                    <ul>
+                        <li><strong>Sintoma:</strong> "Eu não sabia que era para fazer isso."</li>
+                        <li><strong>Solução:</strong> alinhe expectativas. Faça o colaborador repetir com suas próprias palavras o que precisa ser feito.</li>
+                    </ul>
+                    
+                    <h4>2. Capacitação – Ele sabe COMO fazer?</h4>
+                    <ul>
+                        <li><strong>Sintoma:</strong> "Eu não sei como fazer."</li>
+                        <li><strong>Solução:</strong> volte ao checklist de treinamento. Se ele não sabe, é porque você não ensinou ou não consolidou o processo.</li>
+                    </ul>
+                    
+                    <h4>3. Motivação – Ele QUER fazer?</h4>
+                    <ul>
+                        <li><strong>Sintoma:</strong> "Não estou com vontade hoje."</li>
+                        <li><strong>Solução:</strong> descubra o que está drenando energia. Falta de reconhecimento, ambiente tóxico ou até problema pessoal.</li>
+                    </ul>
+                    
+                    <h4>4. Circunstâncias – Algo o está IMPEDINDO de fazer?</h4>
+                    <ul>
+                        <li><strong>Sintoma:</strong> "Eu até faria, mas o sistema não funciona."</li>
+                        <li><strong>Solução:</strong> remova barreiras externas. Muitas vezes não é falta de esforço, mas excesso de obstáculos operacionais.</li>
+                    </ul>
+                    
+                    <p>Esse diagnóstico evita o erro comum de culpar pessoas antes de investigar processos. Ele transforma a liderança de reativa em estratégica.</p>
+                </div>
+                
+                <div class="pull-quote">
+                    <p class="quote-text">Segundo a Gallup, 70% da variação no engajamento dos funcionários está ligada diretamente à atuação do líder.</p>
+                    <p class="quote-author">— Estudo Gallup</p>
+                </div>
+                
+                <div class="content-text">
+                    <h3>Por que funciona</h3>
+                    <ul>
+                        <li>Líderes que diagnosticam causas em vez de buscar culpados criam ambientes onde a equipe aprende rápido e corrige rotas.</li>
+                        <li>Essa postura acelera resultados porque transforma cada problema em oportunidade de evolução — não em muro de lamentações.</li>
+                    </ul>
+                    
+                    <h3>Insight prático</h3>
+                    <p>Na próxima semana, faça o teste: quando um colaborador falhar, não comece cobrando. Use o Diamante: pergunte em sequência se ele sabia o que fazer, como fazer, se queria fazer e se algo o impedia de fazer.</p>
+                    
+                    <p>Em menos de cinco minutos você terá clareza da causa e da solução.</p>
+                    
+                    <h3>Reflexão do Líder</h3>
+                    <p>Você pode continuar apagando incêndios todos os dias ou assumir o papel do líder que diagnostica e ensina sua equipe a vencer.</p>
+                    
+                    <p>A diferença entre um time que te puxa para baixo e um time que te impulsiona está na sua capacidade de diagnosticar antes de culpar.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="page-number">8</div>
+    </section>
+
+    <!-- Chapter 6 -->
+    <section id="chapter6" class="ebook-page chapter-page">
+        <div class="page-content">
+            <div class="chapter-header">
+                <div class="chapter-number">Capítulo 6</div>
+                <h2 class="chapter-title">A Reunião da Vitória: Celebrando e Corrigindo com Inteligência</h2>
+                <p class="chapter-subtitle">Equilibrando reconhecimento e evolução para times motivados</p>
+            </div>
+            
+            <div class="content-section">
+                <div class="content-text">
+                    <p>Liderar não é apenas cobrar, corrigir e acelerar. Também é reconhecer, dar clareza e mostrar à equipe que o esforço tem valor. A rotina de um líder de alta performance precisa de um espaço semanal para celebrar vitórias e corrigir rotas sem desgaste.</p>
+                    
+                    <p>Esse espaço é a <strong>Reunião da Vitória</strong>.</p>
+                </div>
+                
+                <div class="content-text">
+                    <h3>O que é a Reunião da Vitória?</h3>
+                    <p>É uma reunião curta (20–30 minutos, no máximo), realizada toda sexta-feira, com um único objetivo: revisar a semana, reconhecer conquistas e alinhar os próximos passos.</p>
+                    
+                    <p>Quando bem conduzida, ela se transforma em combustível para o time encerrar a semana motivado e começar a próxima focado.</p>
+                    
+                    <h3>Estrutura da Reunião</h3>
+                    <p>A Reunião da Vitória segue um roteiro simples de 3 blocos:</p>
+                    
+                    <h4>1. Reconhecer as vitórias</h4>
+                    <ul>
+                        <li>Comece destacando conquistas, mesmo as pequenas.</li>
+                        <li>Exemplo: "Fechamos um novo contrato", "Melhoramos o tempo de resposta no atendimento em 15%", "O cliente X elogiou nossa entrega".</li>
+                    </ul>
+                    
+                    <h4>2. Aprender com os erros</h4>
+                    <ul>
+                        <li>Liste os pontos que não funcionaram.</li>
+                        <li>Pergunte: "O que aprendemos com isso e como podemos corrigir na próxima semana?"</li>
+                        <li>Importante: não é hora de caçar culpados, mas de extrair aprendizados.</li>
+                    </ul>
+                    
+                    <h4>3. Alinhar o foco da próxima semana</h4>
+                    <ul>
+                        <li>Feche com 1 a 3 prioridades claras para todos.</li>
+                        <li>Deixe registrado para não virar conversa solta.</li>
+                    </ul>
+                </div>
+                
+                <div class="pull-quote">
+                    <p class="quote-text">Psicologia da conquista: reconhecer vitórias aumenta a dopamina do time, gerando mais motivação.</p>
+                    <p class="quote-author">— Estudo de Psicologia Organizacional</p>
+                </div>
+                
+                <div class="content-text">
+                    <h3>Por que funciona</h3>
+                    <ul>
+                        <li><strong>Aprendizado coletivo:</strong> erros são vistos como dados, não fracassos — isso reduz medo e aumenta velocidade de adaptação.</li>
+                        <li><strong>Cultura de clareza:</strong> todos saem da reunião sabendo o que precisa ser feito na segunda-feira.</li>
+                    </ul>
+                    
+                    <h3>Insight prático</h3>
+                    <p>Agende agora a sua primeira Reunião da Vitória para a próxima sexta-feira. Prepare os três blocos com antecedência e conduza de forma objetiva.</p>
+                    
+                    <p>Você vai se surpreender com o impacto que 20 minutos podem ter no engajamento e na produtividade do seu time.</p>
+                    
+                    <h3>Reflexão do Líder</h3>
+                    <p>O líder que cobra sem celebrar cria cansaço. O líder que celebra sem corrigir cria acomodação.</p>
+                    
+                    <p>O verdadeiro líder equilibra os dois: corrige para evoluir, celebra para motivar.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="page-number">9</div>
+    </section>
+
+    <!-- Conclusion -->
+    <section id="conclusion" class="ebook-page chapter-page">
+        <div class="page-content">
+            <div class="chapter-header">
+                <h2 class="chapter-title">Conclusão: Pronto para Entrar no Ciclo Lucrativo?</h2>
+                <p class="chapter-subtitle">Transformando teoria em resultados práticos</p>
+            </div>
+            
+            <div class="content-section">
+                <div class="content-text">
+                    <p>Você chegou até aqui porque sabe que sua empresa não pode mais viver de improviso. Você entendeu que ritmo, cadência e foco diário transformam times de vendas comuns em máquinas de crescimento previsível.</p>
+                    
+                    <p>Somando todos esses ganhos de tempo, foco e produtividade, é comum que empresas vejam resultados de 10% a 20% em crescimento de vendas já nos primeiros 30 dias.</p>
+                    
+                    <p>Mas ler sobre isso é apenas o primeiro passo. O próximo é trazer essa clareza para dentro da sua realidade.</p>
+                </div>
+                
+                <div class="pull-quote">
+                    <p class="quote-text">É exatamente isso que acontece no Raio-X de Vendas — uma reunião estratégica de 1 hora comigo.</p>
+                    <p class="quote-author">— Alexandra Silva</p>
+                </div>
+                
+                <div class="content-text">
+                    <p>Nessa sessão, vamos:</p>
+                    <ul>
+                        <li><strong>Mapear o estado atual</strong> da sua operação comercial em seis dimensões críticas (estratégia, eficiência, processos, indicadores, autonomia e execução).</li>
+                        <li><strong>Identificar os pontos</strong> que mais travam seu crescimento hoje.</li>
+                        <li><strong>Construir uma visão clara</strong> de quais ajustes podem gerar resultado imediato no seu negócio.</li>
+                    </ul>
+                    
+                    <p>Você não sai com "teoria". Sai com um mapa da sua performance comercial, entendendo exatamente onde atacar primeiro.</p>
+                </div>
+                
+                <div class="cta-section">
+                    <h3 class="cta-title">Checklist do Empresário: Estou pronto para meu Raio-X?</h3>
+                    <div class="checklist-container" style="background: var(--color-white); padding: var(--spacing-lg); border-radius: var(--border-radius-md); margin: var(--spacing-lg) 0;">
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="margin-bottom: var(--spacing-sm); display: flex; align-items: center;">
+                                <span style="margin-right: var(--spacing-sm); font-size: 1.2em;">☐</span>
+                                Entendi que reuniões longas não criam ritmo — check-ins diários criam.
+                            </li>
+                            <li style="margin-bottom: var(--spacing-sm); display: flex; align-items: center;">
+                                <span style="margin-right: var(--spacing-sm); font-size: 1.2em;">☐</span>
+                                Sei que sem cadência não existe previsibilidade de vendas.
+                            </li>
+                            <li style="margin-bottom: var(--spacing-sm); display: flex; align-items: center;">
+                                <span style="margin-right: var(--spacing-sm); font-size: 1.2em;">☐</span>
+                                Quero clareza sobre os gargalos da minha operação.
+                            </li>
+                            <li style="margin-bottom: var(--spacing-sm); display: flex; align-items: center;">
+                                <span style="margin-right: var(--spacing-sm); font-size: 1.2em;">☐</span>
+                                Estou pronto para investir 1 hora para destravar meu crescimento.
+                            </li>
+                        </ul>
+                    </div>
+                    
+                                 <p class="cta-text">Se você marcou pelo menos três dessas opções, o próximo passo é claro:</p>
+             <a href="https://wa.me/551152868424?text=Oi!%20Quero%20agendar%20meu%20Raio-X%20de%20Vendas%20gratuito" 
+                class="cta-whatsapp" 
+                target="_blank">
+                📱 Agendar Raio-X via WhatsApp
+             </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="page-number">10</div>
+    </section>
+
+    <!-- About Author -->
+    <section id="author" class="ebook-page author-page">
+        <div class="page-content">
+            <div class="author-content">
+                <div class="author-avatar">A</div>
+                <h2 class="author-name">Alexandra Silva</h2>
+                <p class="author-bio">
+                    Alexandra Silva é uma especialista em vendas e liderança empresarial, escritora e palestrante apaixonada por ajudar empresários a transformarem suas operações comerciais. Com mais de 10 anos de experiência em vendas e gestão de equipes, ela combina metodologias comprovadas com práticas modernas para criar resultados previsíveis e sustentáveis.
+                </p>
+                <p class="author-bio">
+                    Formada em Administração e com especialização em Vendas e Liderança, Alexandra já ajudou centenas de empresas a transformarem suas operações de vendas através de seus programas, workshops e consultorias.
+                </p>
+                
+                <div class="author-social">
+                    <a href="#" class="social-link" aria-label="Instagram">📷</a>
+                    <a href="#" class="social-link" aria-label="LinkedIn">💼</a>
+                    <a href="#" class="social-link" aria-label="Website">🌐</a>
+                    <a href="#" class="social-link" aria-label="Email">✉️</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="page-number">12</div>
+    </section>
+
+    <!-- Thank You Page -->
+    <section id="thank-you" class="ebook-page thank-you-page">
+        <div class="page-content">
+            <div class="thank-you-content">
+                <h2 class="thank-you-title">Obrigada por Embarcar Nesta Jornada</h2>
+                <p class="thank-you-text">
+                    Chegamos ao final desta jornada juntos, mas é apenas o começo da sua transformação empresarial. Lembre-se de que cada passo que você der em direção ao crescimento da sua empresa é uma vitória que merece ser celebrada.
+                </p>
+                <p class="thank-you-text">
+                    Continue implementando, ajustando e crescendo. A transformação de vendas é um processo contínuo, e você tem todo o conhecimento necessário para criar o time dos seus sonhos.
+                </p>
+                <p class="thank-you-signature">Com gratidão e determinação,<br>Alexandra</p>
+            </div>
+        </div>
+        
+        <div class="page-number">13</div>
+    </section>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/551152868424?text=Oi!%20Acabei%20de%20ler%20o%20ebook%20Check-in%20de%205%20Minutos%20e%20quero%20saber%20mais%20sobre%20o%20Raio-X%20de%20Vendas" 
+           class="whatsapp-float" 
+           target="_blank"
+           aria-label="Conversar no WhatsApp">
+           📱
+    </a>
+
+    <!-- JavaScript -->
+    <script>
+        // Navigation functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const navToggle = document.getElementById('navToggle');
+            const navigation = document.getElementById('navigation');
+            
+            // Mobile navigation toggle
+            navToggle.addEventListener('click', function() {
+                navigation.classList.toggle('nav-open');
+            });
+            
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+            
+            // Table of contents navigation
+            document.querySelectorAll('.toc-item').forEach(item => {
+                item.addEventListener('click', function() {
+                    const targetId = this.getAttribute('data-target');
+                    const targetSection = document.getElementById(targetId);
+                    if (targetSection) {
+                        targetSection.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+            
+            // Scroll animations
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('revealed');
+                    }
+                });
+            }, observerOptions);
+            
+            // Observe all content sections
+            document.querySelectorAll('.content-section, .chapter-header, .pull-quote, .image-container, .cta-section').forEach(section => {
+                section.classList.add('scroll-reveal');
+                observer.observe(section);
+            });
+            
+            // Navigation highlight on scroll
+            window.addEventListener('scroll', function() {
+                const sections = document.querySelectorAll('.ebook-page');
+                const navLinks = document.querySelectorAll('.nav-link');
+                
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    if (pageYOffset >= sectionTop - 200) {
+                        current = section.getAttribute('id');
+                    }
+                });
+                
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === `#${current}`) {
+                        link.classList.add('active');
+                    }
+                });
+            });
+        });
+        
+        // Print functionality
+        function printEbook() {
+            window.print();
+        }
+        
+        // Export to PDF (placeholder)
+        function exportToPDF() {
+            alert('Funcionalidade de exportação para PDF será implementada em breve!');
+        }
+        
+        // PDF Download Function
+        function downloadPDF() {
+            // Hide navigation and decorative elements for print
+            const nav = document.getElementById('navigation');
+            const whatsappFloat = document.querySelector('.whatsapp-float');
+            
+            if (nav) nav.style.display = 'none';
+            if (whatsappFloat) whatsappFloat.style.display = 'none';
+            
+            // Trigger print
+            window.print();
+            
+            // Restore elements after print
+            setTimeout(() => {
+                if (nav) nav.style.display = 'flex';
+                if (whatsappFloat) whatsappFloat.style.display = 'flex';
+            }, 1000);
+        }
+    </script>
+</body>
+</html>

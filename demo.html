@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo - Ebook Moderno para Alexandra</title>
+    <meta name="description" content="Demonstração interativa do template de ebook moderno para Alexandra">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/animations.css">
+    
+    <style>
+        .demo-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: var(--spacing-xl);
+        }
+        
+        .demo-header {
+            text-align: center;
+            margin-bottom: var(--spacing-xxl);
+            padding: var(--spacing-xxl);
+            background: var(--gradient-soft);
+            border-radius: var(--border-radius-lg);
+        }
+        
+        .demo-title {
+            font-size: var(--font-size-h1);
+            color: var(--color-text-dark);
+            margin-bottom: var(--spacing-lg);
+        }
+        
+        .demo-subtitle {
+            font-size: var(--font-size-h3);
+            color: var(--color-text);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .demo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: var(--spacing-xl);
+            margin-bottom: var(--spacing-xxl);
+        }
+        
+        .demo-card {
+            background: var(--color-white);
+            border-radius: var(--border-radius-lg);
+            padding: var(--spacing-xl);
+            box-shadow: var(--shadow-soft);
+            transition: var(--transition-medium);
+            cursor: pointer;
+        }
+        
+        .demo-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-medium);
+        }
+        
+        .demo-card h3 {
+            color: var(--color-accent);
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .demo-card p {
+            color: var(--color-text);
+            margin-bottom: var(--spacing-lg);
+        }
+        
+        .demo-button {
+            display: inline-block;
+            background: var(--color-accent);
+            color: var(--color-white);
+            padding: var(--spacing-sm) var(--spacing-lg);
+            border-radius: var(--border-radius-md);
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition-medium);
+        }
+        
+        .demo-button:hover {
+            background: var(--color-text-dark);
+            transform: translateY(-2px);
+        }
+        
+        .demo-features {
+            background: var(--color-white);
+            border-radius: var(--border-radius-lg);
+            padding: var(--spacing-xxl);
+            margin-bottom: var(--spacing-xxl);
+            box-shadow: var(--shadow-soft);
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--spacing-lg);
+            margin-top: var(--spacing-xl);
+        }
+        
+        .feature-item {
+            text-align: center;
+            padding: var(--spacing-lg);
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .feature-title {
+            color: var(--color-text-dark);
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        .feature-text {
+            color: var(--color-text);
+            font-size: var(--font-size-small);
+        }
+        
+        .demo-cta {
+            text-align: center;
+            padding: var(--spacing-xxl);
+            background: var(--gradient-primary);
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--shadow-medium);
+        }
+        
+        .demo-cta h2 {
+            color: var(--color-text-dark);
+            margin-bottom: var(--spacing-lg);
+        }
+        
+        .demo-cta p {
+            color: var(--color-text);
+            margin-bottom: var(--spacing-xl);
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: var(--spacing-md);
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .cta-primary {
+            background: var(--color-accent);
+            color: var(--color-white);
+            padding: var(--spacing-md) var(--spacing-xl);
+            border-radius: var(--border-radius-md);
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition-medium);
+        }
+        
+        .cta-secondary {
+            background: transparent;
+            color: var(--color-text-dark);
+            padding: var(--spacing-md) var(--spacing-xl);
+            border: 2px solid var(--color-text-dark);
+            border-radius: var(--border-radius-md);
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition-medium);
+        }
+        
+        .cta-primary:hover {
+            background: var(--color-text-dark);
+            transform: translateY(-2px);
+        }
+        
+        .cta-secondary:hover {
+            background: var(--color-text-dark);
+            color: var(--color-white);
+            transform: translateY(-2px);
+        }
+        
+        @media (max-width: 768px) {
+            .demo-container {
+                padding: var(--spacing-md);
+            }
+            
+            .demo-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="ebook-navigation" id="navigation">
+        <div class="nav-content">
+            <div class="nav-logo">📚</div>
+            <div class="nav-links">
+                <a href="#demo" class="nav-link">Demo</a>
+                <a href="#features" class="nav-link">Recursos</a>
+                <a href="#download" class="nav-link">Download</a>
+                <a href="index.html" class="nav-link">Ver Ebook</a>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Demo Header -->
+    <section id="demo" class="demo-header">
+        <div class="demo-container">
+            <h1 class="demo-title">Ebook Moderno para Alexandra</h1>
+            <p class="demo-subtitle">
+                Um template elegante e profissional com design contemporâneo, paleta de cores suaves e funcionalidades modernas para criar ebooks impactantes.
+            </p>
+        </div>
+    </section>
+
+    <!-- Demo Grid -->
+    <section class="demo-container">
+        <div class="demo-grid">
+            <div class="demo-card" onclick="window.open('index.html#cover', '_blank')">
+                <h3>🎨 Página de Capa</h3>
+                <p>Design elegante com tipografia centralizada, formas decorativas flutuantes e gradientes sutis que criam uma primeira impressão memorável.</p>
+                <a href="index.html#cover" class="demo-button" target="_blank">Ver Capa</a>
+            </div>
+            
+            <div class="demo-card" onclick="window.open('index.html#toc', '_blank')">
+                <h3>📋 Sumário Interativo</h3>
+                <p>Navegação clicável entre seções com animações suaves, números destacados e efeitos hover que tornam a navegação intuitiva e agradável.</p>
+                <a href="index.html#toc" class="demo-button" target="_blank">Ver Sumário</a>
+            </div>
+            
+            <div class="demo-card" onclick="window.open('index.html#chapter1', '_blank')">
+                <h3>📖 Capítulos</h3>
+                <p>Cabeçalhos de capítulo com design destacado, citações em caixas elegantes e layout otimizado para leitura confortável em qualquer dispositivo.</p>
+                <a href="index.html#chapter1" class="demo-button" target="_blank">Ver Capítulo</a>
+            </div>
+            
+            <div class="demo-card" onclick="window.open('index.html#author', '_blank')">
+                <h3>👤 Sobre o Autor</h3>
+                <p>Página dedicada ao autor com avatar estilizado, biografia e links para redes sociais, criando conexão com os leitores.</p>
+                <a href="index.html#author" class="demo-button" target="_blank">Ver Autor</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="demo-features">
+        <div class="demo-container">
+            <h2 style="text-align: center; color: var(--color-text-dark); margin-bottom: var(--spacing-xl);">
+                Recursos e Características
+            </h2>
+            
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">🎨</div>
+                    <h3 class="feature-title">Design Moderno</h3>
+                    <p class="feature-text">Paleta de cores suaves e pastéis com tipografia elegante e layout minimalista</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">📱</div>
+                    <h3 class="feature-title">Responsivo</h3>
+                    <p class="feature-text">Otimizado para todos os dispositivos com breakpoints inteligentes</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">✨</div>
+                    <h3 class="feature-title">Animações</h3>
+                    <p class="feature-text">Transições suaves e micro-interações que melhoram a experiência do usuário</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">♿</div>
+                    <h3 class="feature-title">Acessível</h3>
+                    <p class="feature-text">Conformidade WCAG 2.1 AA com navegação por teclado e contraste adequado</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">🖨️</div>
+                    <h3 class="feature-title">Print-Ready</h3>
+                    <p class="feature-text">Otimizado para impressão e exportação em PDF com alta qualidade</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">🚀</div>
+                    <h3 class="feature-title">Performance</h3>
+                    <p class="feature-text">Carregamento rápido com otimizações de CSS e JavaScript</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section id="download" class="demo-cta">
+        <div class="demo-container">
+            <h2>Pronto para Começar?</h2>
+            <p>
+                Este template está pronto para uso imediato. Personalize o conteúdo, ajuste as cores conforme sua marca e comece a criar ebooks profissionais que impressionarão seus leitores.
+            </p>
+            
+            <div class="cta-buttons">
+                <a href="index.html" class="cta-primary">Ver Ebook Completo</a>
+                <a href="README.md" class="cta-secondary">Ler Documentação</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- JavaScript -->
+    <script>
+        // Navigation functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const navToggle = document.getElementById('navToggle');
+            const navigation = document.getElementById('navigation');
+            
+            // Mobile navigation toggle
+            navToggle.addEventListener('click', function() {
+                navigation.classList.toggle('nav-open');
+            });
+            
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+            
+            // Navigation highlight on scroll
+            window.addEventListener('scroll', function() {
+                const sections = document.querySelectorAll('section[id]');
+                const navLinks = document.querySelectorAll('.nav-link');
+                
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    if (pageYOffset >= sectionTop - 200) {
+                        current = section.getAttribute('id');
+                    }
+                });
+                
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === `#${current}`) {
+                        link.classList.add('active');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
