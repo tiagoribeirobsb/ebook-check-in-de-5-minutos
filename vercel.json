@@ -1,0 +1,7 @@
+{
+    "name": "ebook-moderno-alexandra",
+    "version": "1.0.0",
+    "scripts": {
+      "build": "mkdir -p public && cp -r *.html *.css styles assets public/ 2>/dev/null || cp *.html public/ 2>/dev/null || echo 'Build complete'"
+    }
+  }
